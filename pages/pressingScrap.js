@@ -17,7 +17,7 @@ const PressingScrap = () => {
       });
   }, []);
   const PressingReady = currentPressingLots?.filter(
-    (l) => l.PressingCounterTotal == undefined
+    (l) => l.PressingCounterTotal == undefined && l.ForgingCounterTotal >= 1
   );
   const pCards = PressingReady?.map((lot) => (
     <Card key={lot._id}>

@@ -21,7 +21,7 @@ const TappingScrap = () => {
     //   });
   }, []);
   const TappingReady = currentTappingLots?.filter(
-    (l) => l.TappingCounterTotal == undefined
+    (l) => l.TappingCounterTotal == undefined && l.PressingCounterTotal >= 1
   );
   const tapCards = TappingReady?.map((lot) => (
     <Card key={lot._id}>

@@ -22,7 +22,7 @@ const VsPackScrap = () => {
   }, []);
 
   const VSPackReady = currentVSPackLots?.filter(
-    (l) => l.VSPackCounterTotal == undefined
+    (l) => l.VSPackCounterTotal == undefined && l.TappingCounterTotal >= 1
   );
   const vsPackCards = VSPackReady?.map((lot) => (
     <Card key={lot._id}>
