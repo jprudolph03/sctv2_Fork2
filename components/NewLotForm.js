@@ -37,6 +37,7 @@ const NewLotForm = () => {
       singlePartWeight: e.target[2].value,
       totalCoilWeight: e.target[3].value,
       lotLoss: e.target[4].value,
+      DPTLoss: e.target[5].value,
       eXt: parseInt(
         ((e.target[3].value - e.target[4].value) / e.target[2].value) * 1000
       ),
@@ -86,6 +87,14 @@ const NewLotForm = () => {
         <label>Standard Loss</label>
         <input
           value={selectedPart ? selectedPart.STDLoss : 0}
+          type="number"
+          step={"0.01"}
+        />
+      </Form.Field>
+      <Form.Field>
+        <label>DPT Loss</label>
+        <input
+          value={selectedPart ? selectedPart.DPTLoss : 0}
           type="number"
           step={"0.01"}
         />
